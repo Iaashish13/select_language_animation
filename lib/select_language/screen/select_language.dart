@@ -17,8 +17,10 @@ class _SelectLanguageState extends State<SelectLanguage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle:
-            const SystemUiOverlayStyle(statusBarColor: Colors.white),
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.white,
+          statusBarIconBrightness: Brightness.dark,
+        ),
         backgroundColor: Colors.white,
         centerTitle: true,
         // title: Text(
@@ -42,16 +44,19 @@ class _SelectLanguageState extends State<SelectLanguage> {
             SizedBox(
               height: 30.h,
             ),
-            Text(
-              'Please kindly choose  the language that \n you refer',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20.sp,
-                color: Colors.black,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5.w),
+              child: Text(
+                'Please kindly choose  the language that \n you refer',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  color: Colors.black,
+                ),
               ),
             ),
             SizedBox(
-              height: 45.h,
+              height: 60.h,
             ),
             AniamtionWidget(
               onTap: (isEnglish) {
@@ -71,7 +76,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 15.h),
                 height: 55.h,
-                width: 0.68.sw,
+                width: 0.72.sw,
                 decoration: BoxDecoration(
                   color: AppColors.primaryColor,
                   borderRadius: BorderRadius.circular(8.r),
